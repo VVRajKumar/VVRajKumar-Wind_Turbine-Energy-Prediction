@@ -31,7 +31,7 @@ Visual Studio Code (VS Code)
 1. Clone the Repository
 First, clone the repository to your local machine:
 
-bash git clone https://github.com/VVRajKumar/Wind-Energy-Prediction.git cd wind-turbine-energy-prediction
+bash git clone https://github.com/VVRajKumar/Wind_Turbine-Energy-Prediction.git cd Wind_Turbine-Energy-Prediction
 
 2. Create a Virtual Environment
 
@@ -53,13 +53,14 @@ python app.py
 
 The application will start, and you can access it at http://127.0.0.1:5000 in your web browser.
 
-![image](https://github.com/user-attachments/assets/f46a7069-939e-4988-b301-edbe607d7bd5)
+![image](https://github.com/user-attachments/assets/5d3cb481-c7bd-41a0-ab7e-4818b28cc0c0)
 
-![image](https://github.com/user-attachments/assets/1697f2f1-b428-4c48-bb1e-a036097a56c0)
+![image](https://github.com/user-attachments/assets/b4348372-9959-48d0-b389-56ce18b65a11)
 
-![image](https://github.com/user-attachments/assets/f564d657-bfdb-4411-9b2e-f055a8524198)
+![image](https://github.com/user-attachments/assets/e29ebf98-8ae1-47b5-a98c-f1d17f11999b)
 
-![image](https://github.com/user-attachments/assets/e6231349-315d-45c7-855b-b89939844fbd)
+![image](https://github.com/user-attachments/assets/f83a3c2c-3a29-404e-b85d-5e30cb3a5c61)
+
 
 
 
