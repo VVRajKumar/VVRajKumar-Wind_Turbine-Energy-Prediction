@@ -63,7 +63,7 @@ def train_model(train_X, train_y):
 # Function to evaluate the model
 def evaluate_model(model, val_X, val_y):
     power_preds = model.predict(val_X)
-    print("Mean Absolute Error:", (mean_absolute_error(val_y, power_preds))*0.001)
+    print("Mean Absolute Error:", mean_absolute_error(val_y, power_preds))
     print("R^2 Score:", r2_score(val_y, power_preds))
 
 # Main script
