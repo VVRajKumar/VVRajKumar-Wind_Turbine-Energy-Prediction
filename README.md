@@ -2,7 +2,7 @@
 # Wind Turbine Energy Output Prediction
 
 
-This project focuses on predicting the energy output of a wind turbine based on various weather conditions. Users can input their city's weather data, including temperature, humidity, wind speed, and atmospheric pressure, to get real-time information. Additionally, by providing theoretical power curves, current wind speed, and wind direction, the application predicts the wind energy produced by a wind turbine.
+This project focuses on predicting the energy output of a wind turbine based on various weather conditions. Users can input their city's weather data, including temperature, humidity, wind speed, and atmospheric pressure, to get real-time information. Additionally, by providing theoretical power curves, current wind speed, and wind direction, the application predicts the wind energy produced by a wind turbine
 
 ## Features
 
