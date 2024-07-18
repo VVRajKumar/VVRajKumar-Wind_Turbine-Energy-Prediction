@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wind Turbine Energy Prediction Based on Weather Conditions</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f5deb3;
+            color: #4b3621;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #f5deb3;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #5c4033;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.8em;
+            margin: 0;
+        }
+        .form-section, .prediction-section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #4b3621;
+            border-radius: 10px;
+        }
+        .form-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .form-section div, .prediction-section div {
+            width: 45%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #4b3621;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #5c4033;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #4b3621;
+        }
+        .weather-data {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #4b3621;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .weather-data p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .weather-data h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Wind Turbine Energy Prediction Based on Weather Conditions</h1>
+        </div>
+        <div class="form-section">
+            <div>
+                <form action="/windapi" method="POST">
+                    <label for="city">Give your city name to know the weather conditions..</label>
+                    <input type="text" id="city" name="city" required>
+                    <input type="submit" value="Check the Weather Conditions">
+                </form>
+            </div>
+            <div>
+                <form action="/y_predict" method="POST">
+                    <label for="theoretical_power">Theoretical Power in KWh:</label>
+                    <input type="text" id="theoretical_power" name="theoretical_power" required>
+                    <label for="wind_speed">Wind Speed in m/s:</label>
+                    <input type="text" id="wind_speed" name="wind_speed" required>
+                    <label for="wind_direction">Wind Direction in degrees:</label>
+                    <input type="text" id="wind_direction" name="wind_direction" required>
+                    <input type="submit" value="Predict">
+                </form>
+            </div>
+        </div>
+        <div class="weather-data">
+            {% if temp and humid and pressure and speed %}
+                <h2>The weather conditions of the city are</h2>
+                <p>Temperature: {{ temp }}</p>
+                <p>Humidity: {{ humid }}</p>
+                <p>Pressure: {{ pressure }}</p>
+                <p>Wind Speed: {{ speed }}</p>
+            {% endif %}
+            {% if prediction_text %}
+                <h2>Prediction Result</h2>
+                <p>{{ prediction_text }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
